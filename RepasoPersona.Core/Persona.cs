@@ -15,10 +15,6 @@ namespace RepasoPersona.Core
             Apellido = apellido;
             Efectivo =  efectivo;
         }
-        public Persona ()
-        {
-
-        }
         public void Debitar (double monto){
             if (monto <= 0 )
                 throw new Exception("El monto debe ser > a 0");
@@ -29,12 +25,10 @@ namespace RepasoPersona.Core
         public void Acreditar(double monto)
         {
             if(monto <= 0)
-            throw new Excption("El monto debe ser mayor a cero");
+            throw new Exception("El monto debe ser mayor a cero");
             Efectivo += monto;
         }
-        }
+        
     }
 }
-
-        
 
