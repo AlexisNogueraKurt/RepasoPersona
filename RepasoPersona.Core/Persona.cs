@@ -29,6 +29,7 @@ namespace RepasoPersona.Core
             Efectivo += monto;
         }
         
+        
     }
 }
 

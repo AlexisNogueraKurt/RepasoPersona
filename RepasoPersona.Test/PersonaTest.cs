@@ -3,21 +3,28 @@ using Xunit;
 using RepasoPersona.Core;
 
 
-namespace Persona.Test
+namespace PersonaTest
 {
     public class PersonaTest
     {
         public Persona Pepito {get; set;}
+        public PersonaTest () => Pepito = new Persona ("Pepito","Gomez",0);
         [Fact]
         public void Constructor()
         {
-            Pepito = new Persona ("Pepito","Gomez",0);
-            Assert.Equal("Pepito",Pepito.Nombre); 
+            Assert.Equal("Pepito",Pepito.Nombre);
             Assert.Equal("Gomez",Pepito.Apellido);
             Assert.Equal(0,Pepito.Efectivo);
 
-
-
         }
+        [Fact]
+        public void AcreditarPositivo()
+        {
+            double esperado = 1000;
+            Pepito.Acreditar(1000);
+            /*Assert.NotEqual = Falla aproposito */
+            Assert.Equal(esperado,Pepito.Efectivo,3);
+        }
+
     }
 }
