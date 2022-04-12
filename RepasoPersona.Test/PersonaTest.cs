@@ -55,13 +55,13 @@ namespace RepasoPersona.Test
         }
 
         public Cuenta Uala { get; set; } 
-        public Cuenta Bna { get; set; }
+        public Cuenta Bbva { get; set; }
         
         [Fact]
         public double SumaCuentas()
         {
             Uala = new Cuenta(1241, 400);
-            Bna = new Cuenta(31241, 787);
+            Bbva = new Cuenta(31241, 787);
             return Pepito.SaldoCuentas;
         }
     }
