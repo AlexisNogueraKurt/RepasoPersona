@@ -12,12 +12,12 @@ namespace RepasoPersona.Core
         public double SaldoCuentas => Cuentas.Sum(x => x.Saldo);
         public List<Cuenta> Cuentas { get; set;}
         public Persona() => Saldo = 0;
-        public Persona(string nombre, string apellido, double efectivo)
+        public Persona(string nombre, string apellido, double dinero)
         {
             Cuentas = new List<Cuenta>();
             Nombre = nombre;
             Apellido = apellido;
-            Saldo = efectivo;
+            Saldo = dinero;
         } 
     }
 }
