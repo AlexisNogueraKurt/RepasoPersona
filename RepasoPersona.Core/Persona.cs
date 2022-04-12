@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace RepasoPersona.Core
 {
-    public class Persona : EnteConSaldo
+    public class Persona: EnteConSaldo
     {
         public string Nombre { get; private set; }
         public string Apellido { get; private set; }
@@ -18,8 +18,11 @@ namespace RepasoPersona.Core
             Nombre = nombre;
             Apellido = apellido;
             Saldo = efectivo;
-        }
+        } 
     }
 }
+
+
+        
 
 
